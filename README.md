@@ -1,6 +1,6 @@
 # Multimodal deep learning for generating potential anti-Dengue peptide
 
-![Abstract Graphic](graphic_ADP.jpg)
+![Abstract Graphic](graphic_ADP.png)
 
 #### Huynh Anh Duy*, Tarapong Srisongkram** 
 
