@@ -130,7 +130,7 @@ print(f"Recall: {recall:.4f}")
 print(f"F1-score: {f1:.4f}")
 
 # ====== 5. Predict and Save Results for New Sequences ======
-def predict_and_save_from_csv(input_csv, output_csv="Predictions_kmers.csv"):
+def predict_and_save_from_csv(input_csv, output_csv="Predicted_dataset_kmers.csv"):
     new_df = pd.read_csv(input_csv)
     new_sequences = new_df["Sequence"].values
     encoded_new_sequences = encode_kmer_sequences(new_sequences, max_length, kmer_to_index)
@@ -143,4 +143,4 @@ def predict_and_save_from_csv(input_csv, output_csv="Predictions_kmers.csv"):
     results_df.to_csv(output_csv, index=False)
     print(f"Predictions saved to {output_csv}")
 
-predict_and_save_from_csv("Predictions_kmers_output.csv")
+predict_and_save_from_csv("Predicted_dataset_kmers_output.csv")
