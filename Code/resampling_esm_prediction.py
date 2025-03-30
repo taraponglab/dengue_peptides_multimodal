@@ -6,7 +6,7 @@ import tensorflow as tf
 from tensorflow.keras.models import load_model
 
 # ====== 1. Load New Data ======
-new_file_path = "Dataset.csv" 
+new_file_path = "Preddicted_Dataset.csv" 
 new_df = pd.read_csv(new_file_path)
 new_peptides = new_df["Sequence"].values
 
@@ -38,7 +38,7 @@ X_new = extract_esm_features(new_peptides)
 
 # ====== 4. Load Trained BiLSTM Models ======
 print("Loading trained models...")
-model1 = load_model("bilstm_model1.h5")  # Thay thế bằng đường dẫn thực tế
+model1 = load_model("bilstm_model1.h5") 
 model2 = load_model("bilstm_model2.h5")
 
 # Reshape for BiLSTM
@@ -56,7 +56,7 @@ new_df["Predicted_Probability"] = y_pred_prob_avg
 new_df["Prediction_Label"] = np.where(y_pred_prob_avg > 0.5, "Anti-Dengue", "Non-Anti-Dengue")
 
 # Save results to CSV
-output_file = "Predictions_ESM.csv"
+output_file = "Preddicted_Dataset_Outputs.csv"
 new_df.to_csv(output_file, index=False)
 
 print(f"Predictions saved to {output_file}")
