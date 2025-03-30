@@ -9,7 +9,7 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 from collections import Counter
 
 # ====== 1. Load Data from CSV ======
-file_path = "DENV2.csv"  # Giả định CSV chứa nhãn nhị phân
+file_path = "Dataset.csv"  
 
 df = pd.read_csv(file_path)
 
@@ -130,7 +130,7 @@ print(f"Recall: {recall:.4f}")
 print(f"F1-score: {f1:.4f}")
 
 # ====== 5. Predict and Save Results for New Sequences ======
-def predict_and_save_from_csv(input_csv, output_csv="DENV2_generated_WGANGP_33seq_combined_predictions_kmers_4.csv"):
+def predict_and_save_from_csv(input_csv, output_csv="Predictions_kmers.csv"):
     new_df = pd.read_csv(input_csv)
     new_sequences = new_df["Sequence"].values
     encoded_new_sequences = encode_kmer_sequences(new_sequences, max_length, kmer_to_index)
@@ -143,4 +143,4 @@ def predict_and_save_from_csv(input_csv, output_csv="DENV2_generated_WGANGP_33se
     results_df.to_csv(output_csv, index=False)
     print(f"Predictions saved to {output_csv}")
 
-predict_and_save_from_csv("DENV2_generated_WGANGP_33seq_combined_2.csv")
+predict_and_save_from_csv("Predictions_kmers_output.csv")
