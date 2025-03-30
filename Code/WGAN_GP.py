@@ -7,7 +7,7 @@ from tensorflow.keras.optimizers import Adam
 import tensorflow.keras.backend as K
 
 # Parameters
-SEQ_LENGTH = 44
+SEQ_LENGTH = 
 AMINO_ACID_SIZE = 20
 NOISE_DIM = 300
 BATCH_SIZE = 32
@@ -112,7 +112,7 @@ class WGAN_GP:
                 print(f"Epoch {epoch}/{epochs}, Critic Loss: {critic_loss:.4f}, Generator Loss: {generator_loss:.4f}")
 
 # 6. Load Data
-input_file = 'DENV2_original_processing.csv'
+input_file = 'Original.csv'
 real_data = prepare_data_from_csv(input_file, SEQ_LENGTH, AMINO_ACID_MAPPING)
 
 # 7. Build Models
@@ -132,13 +132,13 @@ def decode_sequence(one_hot_encoded, seq_length, amino_acid_mapping):
         decoded_sequence += reverse_mapping.get(amino_acid_index, '-')
     return decoded_sequence
 
-num_sequences = 33
+num_sequences = 
 noise = tf.random.normal((num_sequences, NOISE_DIM))
 generated_data = generator.predict(noise)
 decoded_sequences = [decode_sequence(seq, SEQ_LENGTH, AMINO_ACID_MAPPING) for seq in generated_data]
 
 # Save to CSV
-output_file = 'DENV2_generated_WGANGP_44_33seq.csv'
+output_file = 'generated.csv'
 df = pd.DataFrame(decoded_sequences, columns=['Sequence'])
 df.to_csv(output_file, index=False)
 print(f"Generated sequences saved to {output_file}")
