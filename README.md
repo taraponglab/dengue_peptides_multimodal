@@ -12,8 +12,6 @@ Department of Health Sciences, College of Natural Sciences, Can Tho University, 
 
 Source codes and dataset is available in this repository.
 
-Submitted to **Journal of Computer-Aided Molecular Design.**
-
 #### Package version
 Rdkit: v.2024.9.4; Scikit-learn: v1.5.2; Tensorflow: v2.17.0; Numpy: v.1.26.4.
 
