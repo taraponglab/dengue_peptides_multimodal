@@ -1,4 +1,4 @@
-# Multimodal deep learning for generating potential anti-Dengue peptide
+# Multimodal Deep Learning for Generating Potential Anti-Dengue Peptides
 
 ![Abstract Graphic](graphic_ADPs.png)
 
