@@ -14,7 +14,7 @@ Source codes and dataset is available in this repository.
 
 **A publicly accessible web server for ADP prediction is available at: https://antidengue-peptide-predictor.streamlit.app**
 
-**The article has been published in _ACS Omega_ and is available at:: https://pubs.acs.org/doi/10.1021/acsomega.5c03510**
+**The article has been published in _ACS Omega_ and is available at: https://pubs.acs.org/doi/10.1021/acsomega.5c03510**
 
 #### Package version
 Rdkit: v.2024.9.4; Scikit-learn: v1.5.2; Tensorflow: v2.17.0; Numpy: v.1.26.4.
